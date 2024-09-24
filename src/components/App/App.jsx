@@ -7,6 +7,7 @@ import ContactForm from "../ContactForm/ContactForm";
 import ContactList from "../ContactList/ContactList";
 import SearchBox from "../SearchBox/SearchBox";
 import { selectError, selectLoading } from "../../redux/selectors";
+import Register from "../page/Register";
 
 function App() {
   const dispatch = useDispatch();
@@ -18,12 +19,20 @@ function App() {
 
   return (
     <div className={style.formWrapper}>
-      <div className={style.container}>
+      <Register />
+      {/* <div className={style.container}>
         <ContactForm />
         <SearchBox />
         {loading && !error && <b>Loading Contacts Book...</b>}
         <ContactList />
-      </div>
+      </div> */}
+
+      {/*  МАРШРУТИЗАЦІЯ  */}
+      {/* <Routers>
+        <Route path='/' element={ }>Home</Route>
+        <Route path='/contacts' element={ }>Contacts</Route>
+        <Route paths="/tasks" element={}>Tasks</Route>
+      </Routers> */}
     </div>
   );
 }
