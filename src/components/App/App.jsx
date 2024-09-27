@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Routes, Route } from "react-router-dom";
 import { fetchContacts } from "../../redux/contactsOps";
 
 import style from "./App.module.css";
@@ -9,6 +10,8 @@ import SearchBox from "../SearchBox/SearchBox";
 import { selectError, selectLoading } from "../../redux/selectors";
 import Register from "../page/Register";
 import { AutNav } from "../AutNav/AutNav";
+import LoginForm from "../LoginForm/LoginForm";
+import RegisterForm from "../RegisterForm/RegisterForm";
 
 function App() {
   const dispatch = useDispatch();
@@ -30,11 +33,13 @@ function App() {
       </div> */}
 
       {/*  МАРШРУТИЗАЦІЯ  */}
-      {/* <Routers>
-        <Route path='/' element={ }>Home</Route>
+      <Routes>
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/register" element={<RegisterForm />} />
+        {/* <Route path='/' element={ }>Home</Route>
         <Route path='/contacts' element={ }>Contacts</Route>
-        <Route paths="/tasks" element={}>Tasks</Route>
-      </Routers> */}
+        <Route paths="/tasks" element={}>Tasks</Route> */}
+      </Routes>
     </div>
   );
 }
