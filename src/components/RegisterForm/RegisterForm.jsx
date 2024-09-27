@@ -1,11 +1,11 @@
-import style from "./ModalLoginForm.module.css";
+import style from "./RegisterForm.module.css";
 
 import { useDispatch } from "react-redux";
 import { useId } from "react";
 import { Form, Field, Formik } from "formik";
 import { register } from "../../redux/auth/operations";
 
-export default function ModalLoginForm() {
+export default function RegisterForm() {
   const dispatch = useDispatch();
   const labelID = useId();
   const handleSubmitForm = (values, actions) => {

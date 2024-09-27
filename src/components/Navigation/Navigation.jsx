@@ -11,7 +11,6 @@ export default function Navigation() {
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/contacts">Contacts</NavLink>
-        <NavLink to="'/tasks">Tasks</NavLink>
       </nav>
     </header>
   );

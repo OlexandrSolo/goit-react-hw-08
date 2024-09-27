@@ -8,6 +8,7 @@ import ContactList from "../ContactList/ContactList";
 import SearchBox from "../SearchBox/SearchBox";
 import { selectError, selectLoading } from "../../redux/selectors";
 import Register from "../page/Register";
+import { AutNav } from "../AutNav/AutNav";
 
 function App() {
   const dispatch = useDispatch();
@@ -19,7 +20,8 @@ function App() {
 
   return (
     <div className={style.formWrapper}>
-      <Register />
+      <AutNav />
+      {/* <Register /> */}
       {/* <div className={style.container}>
         <ContactForm />
         <SearchBox />
