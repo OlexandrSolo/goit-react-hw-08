@@ -1,4 +1,4 @@
-.wrapper {
+/* .wrapper {
   min-height: 100vh;
   width: 1200px;
   background-image: linear-gradient(
@@ -31,4 +31,16 @@
 
 .link:not(:last-child) {
   margin-bottom: 50px;
+} */
+
+.link {
+  font-size: 18px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #fff;
+}
+
+.link:not(:last-child) {
+  margin-right: 50px;
 }

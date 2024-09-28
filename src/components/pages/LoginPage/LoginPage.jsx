@@ -1,9 +1,8 @@
 import LoginForm from "../../LoginForm/LoginForm";
-import style from "../page/Register.module.css";
 
 export default function Register() {
   return (
-    <div className={style.loginForm}>
+    <div className="">
       <title>Login Form</title>
       <LoginForm />
     </div>
