@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Routes, Route } from "react-router-dom";
 import { fetchContacts } from "../../redux/contactsOps";
@@ -8,10 +8,11 @@ import ContactForm from "../ContactForm/ContactForm";
 import ContactList from "../ContactList/ContactList";
 import SearchBox from "../SearchBox/SearchBox";
 import { selectError, selectLoading } from "../../redux/selectors";
-import Register from "../page/Register";
 import { AutNav } from "../AutNav/AutNav";
-import LoginForm from "../LoginForm/LoginForm";
-import RegisterForm from "../RegisterForm/RegisterForm";
+import Layout from "../Layout/Layout";
+
+const LoginPage = lazy(() => import("../pages/LoginPage/LoginPage"));
+const RegisterPage = lazy(() => import("../pages/RegisterPage/RegisterPage"));
 
 function App() {
   const dispatch = useDispatch();
@@ -22,7 +23,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className={style.formWrapper}>
+    <Layout>
       <AutNav />
       {/* <Register /> */}
       {/* <div className={style.container}>
@@ -33,14 +34,16 @@ function App() {
       </div> */}
 
       {/*  МАРШРУТИЗАЦІЯ  */}
-      <Routes>
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/register" element={<RegisterForm />} />
-        {/* <Route path='/' element={ }>Home</Route>
+      <Suspense fallback={<div>Loading....</div>}>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          {/* <Route path='/' element={ }>Home</Route>
         <Route path='/contacts' element={ }>Contacts</Route>
         <Route paths="/tasks" element={}>Tasks</Route> */}
-      </Routes>
-    </div>
+        </Routes>
+      </Suspense>
+    </Layout>
   );
 }
 
