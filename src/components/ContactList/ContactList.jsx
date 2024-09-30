@@ -1,11 +1,19 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, lazy, Suspense } from "react";
 import style from "./ContactList.module.css";
-
+import { selectIsLoggedIn } from "../../redux/auth/selectors";
 import ContactListItem from "../Contact/Contact";
-import { selectVisibleContact } from "../../redux/contacts/selectors";
+// import { selectVisibleContact } from "../../redux/contacts/selectors";
+import { selectContacts } from "../../redux/contacts/selectors";
 
 export default function ContactList() {
-  const listContact = useSelector(selectVisibleContact);
+  const dispatch = useDispatch();
+  // const listContact = useSelector(selectVisibleContact);
+  const listContact = useSelector(selectContacts);
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
 
   return (
     <ul>

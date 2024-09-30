@@ -24,6 +24,7 @@ const sliceContacts = createSlice({
                 state.error = null;
                 state.items = action.payload
             })
+            .addCase(logout.fulfilled, () => { })
             .addCase(fetchContacts.rejected, handleRejected)
             .addCase(addContact.pending, handlePending)
             .addCase(addContact.fulfilled, (state, action) => {

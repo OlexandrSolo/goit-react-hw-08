@@ -1,6 +1,6 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit"
-const baseAPI = axios.create({ baseURL: "https://connections-api.goit.global" })
+export const baseAPI = axios.create({ baseURL: "https://connections-api.goit.global" })
 
 const setAuthHeader = token => {
     baseAPI.defaults.headers.common.Authorization = `Bearer ${token}`
