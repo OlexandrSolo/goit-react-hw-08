@@ -6,7 +6,6 @@ import { selectFilteredContacts } from "../../redux/contacts/selectors";
 
 export default function ContactList() {
   const filteredContacts = useSelector(selectFilteredContacts);
-
   return (
     <ul>
       {filteredContacts.map((user) => (

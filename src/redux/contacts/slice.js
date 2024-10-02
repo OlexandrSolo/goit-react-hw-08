@@ -3,11 +3,11 @@ import { addContact, deleteContact, fetchContacts } from "../../redux/contacts//
 import { logout } from "../auth/operations";
 
 const INITIAL_STATE = {
-    contacts: {
-        items: [],
-        loading: false,
-        error: null
-    }
+
+    items: [],
+    loading: false,
+    error: null
+
 };
 
 export const sliceContacts = createSlice({

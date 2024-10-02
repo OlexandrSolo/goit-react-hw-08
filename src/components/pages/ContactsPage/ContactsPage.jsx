@@ -13,7 +13,6 @@ export default function ContactsPage() {
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
-  console.log(contacts);
 
   return (
     <div>
