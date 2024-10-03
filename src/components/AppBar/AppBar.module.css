@@ -3,6 +3,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-
-  border: 1px solid #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: rgba(240, 248, 255, 0.169);
+  border-radius: 10px;
 }

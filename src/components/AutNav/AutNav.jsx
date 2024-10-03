@@ -3,7 +3,7 @@ import style from "../AutNav/AutNav.module.css";
 
 export const AutNav = () => {
   return (
-    <div className={style.wrapper}>
+    <div>
       <NavLink to="/register" className={style.link}>
         Register
       </NavLink>

@@ -18,7 +18,7 @@ import storage from 'redux-persist/lib/storage'
 
 const persistedAuthReducer =
 {
-    key: 'root',
+    key: 'jwt-token',
     storage,
     whitelist: ["token"]
 };

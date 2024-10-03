@@ -3,7 +3,8 @@
   line-height: 1.11111;
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: #fff;
+  color: #131212;
+  font-weight: 900;
 }
 
 .link:not(:last-child) {

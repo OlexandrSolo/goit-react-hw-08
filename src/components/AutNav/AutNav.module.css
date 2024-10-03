@@ -1,44 +1,10 @@
-/* .wrapper {
-  min-height: 100vh;
-  width: 1200px;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url("https://cdn.pixabay.com/photo/2019/03/14/21/57/change-4056014_1280.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.startNav {
-  max-width: 600px;
-  height: 200px;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 40px;
-}
-
-.link {
-  display: block;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11111;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: #fff;
-}
-
-.link:not(:last-child) {
-  margin-bottom: 50px;
-} */
-
 .link {
   font-size: 18px;
   line-height: 1.11111;
   letter-spacing: 0.02em;
   text-decoration: none;
-  color: #fff;
+  color: #131212;
+  font-weight: 900;
 }
 
 .link:not(:last-child) {
