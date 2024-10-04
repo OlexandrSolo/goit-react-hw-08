@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import style from "./ContactList.module.css";
-import { selectIsLoggedIn } from "../../redux/auth/selectors";
 import ContactListItem from "../Contact/Contact";
 import { selectFilteredContacts } from "../../redux/contacts/selectors";
 

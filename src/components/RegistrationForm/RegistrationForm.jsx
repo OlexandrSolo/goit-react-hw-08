@@ -1,9 +1,8 @@
-import style from "../RegistrationForm/RegistrationForm.module.css";
-
 import { useDispatch } from "react-redux";
 import { useId } from "react";
 import { Form, Field, Formik } from "formik";
 import { register } from "../../redux/auth/operations";
+import style from "../RegistrationForm/RegistrationForm.module.css";
 
 export default function RegistrationForm() {
   const dispatch = useDispatch();
